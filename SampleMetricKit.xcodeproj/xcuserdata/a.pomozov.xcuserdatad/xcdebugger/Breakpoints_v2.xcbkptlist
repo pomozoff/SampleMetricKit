@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "3885D908-B317-482A-8562-CC6A9F471AB8"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "06E422E9-700E-4C08-A0AB-D61418C67EA4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SampleMetricKit/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "processMetricPayload(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5D3CF6FF-135E-43A1-BBE2-FF3EB154C605"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SampleMetricKit/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "didReceive(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5D3CF6FF-135E-43A1-BBE2-FF3EB154C605 - 82611fd717e53f24"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SampleMetricKit.MainViewController.didReceive(Swift.Array&lt;__C.MXMetricPayload&gt;) -&gt; ()"
+                  moduleName = "SampleMetricKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a.pomozov/Developer/SampleMetricKit/SampleMetricKit/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "388">
+               </Location>
+               <Location
+                  uuid = "5D3CF6FF-135E-43A1-BBE2-FF3EB154C605 - d9ffd77f72089ea9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in SampleMetricKit.MainViewController.didReceive(Swift.Array&lt;__C.MXMetricPayload&gt;) -&gt; ()"
+                  moduleName = "SampleMetricKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a.pomozov/Developer/SampleMetricKit/SampleMetricKit/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
