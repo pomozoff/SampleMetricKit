@@ -19,21 +19,15 @@ final class ViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let state = begin(name: "Visible", category: String(describing: Self.self))
-        self.state = state
-        NSLog("XXX - Begin signpost with state: \(state)")
+        begin(name: Constant.signpostScrollName, category: String(describing: Self.self))
     }
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        state.map {
-            end(name: "Visible", category: String(describing: Self.self), state: $0)
-            NSLog("XXX - End signpost with state: \($0)")
-        }
+        end(name: Constant.signpostScrollName, category: String(describing: Self.self))
     }
 
     private var items: [String] = []
-    private var state: OSSignpostIntervalState?
 
     private var itemHeight: CGFloat = 40.0 {
         didSet {
@@ -107,21 +101,18 @@ private extension ViewController {
 }
 
 private extension ViewController {
-    @discardableResult
-    func begin(name: StaticString, category: String) -> OSSignpostIntervalState {
+    @inline(__always)
+    func begin(name: StaticString, category: String) {
         let logHandle = MXMetricManager.makeLogHandle(category: category)
-        let signposter = OSSignposter(logHandle: logHandle)
-        let signpostID = signposter.makeSignpostID()
-
-        let state = signposter.beginAnimationInterval(name, id: signpostID)
-
-        return state
+        mxSignpostAnimationIntervalBegin(log: logHandle, name: name)
+        NSLog("XXX - Begin signpost animation with handle: \(logHandle)")
     }
 
-    func end(name: StaticString, category: String, state: OSSignpostIntervalState) {
+    @inline(__always)
+    func end(name: StaticString, category: String) {
         let logHandle = MXMetricManager.makeLogHandle(category: category)
-        let signposter = OSSignposter(logHandle: logHandle)
-        signposter.endInterval(name, state)
+        mxSignpost(.end, log: logHandle, name: name)
+        NSLog("XXX - End signpost with handle: \(logHandle)")
     }
 }
 
@@ -129,4 +120,5 @@ private enum Constant {
     static let sectionCount = 100
     static let itemCount = 2000
     static let reuseIdentifier = "PhotoCell"
+    static let signpostScrollName: StaticString = "Scroll"
 }
